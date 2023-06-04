@@ -60,6 +60,7 @@ print("Questin Four")
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
+import tkinter
 # Read the CSV file into a pandas DataFrame
 df = pd.read_csv('iris.data.csv', header=None, names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species'])
 
@@ -77,10 +78,13 @@ sns.pairplot(filtered_data, hue='species')
 plt.show()
 
 print("Question Five")
-
+#import tkinter
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+#import matplotlib
+#matplotlib.use('TkAgg')
+
 
 # Read the CSV file into a pandas DataFrame
 df = pd.read_csv('iris.data.csv', header=None, names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species'])
@@ -100,4 +104,5 @@ plt.ylabel('Count')
 plt.title(f'Distribution of {target_feature}')
 
 # Display the histogram
-plt.show()
+plt.savefig("dataexplorer.png")
+#plt.show()
